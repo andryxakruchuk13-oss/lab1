@@ -1,0 +1,115 @@
+# ==========================================
+# Лабораторна робота №1
+# Тема: Основи Python. Змінні. Оператори.
+# Виконав: Крищук Андрій
+# ==========================================
+
+# ---------- 1. Hello, World! ----------
+print("Hello, World!")
+print("=" * 40)
+
+
+# ---------- 2. Створення змінних всіх типів ----------
+age = 18
+year = 2025
+pi = 3.14159
+temperature = -5.5
+name = "Андрій"
+surname = "Крищук"
+greeting = 'Привіт!'
+is_student = True
+is_working = False
+numbers = [1, 2, 3, 4, 5]
+fruits = ["яблуко", "банан", "груша"]
+coordinates = (10.5, 20.3)
+colors = ("червоний", "зелений", "синій")
+unique_numbers = {1, 2, 3, 3, 2, 1}
+letters = {"a", "b", "c"}
+student = {"ім'я": "Андрій", "прізвище": "Крищук", "вік": 18, "курс": 1}
+nothing = None
+
+
+# ---------- 3. Виведення значень та їх типів ----------
+print("\n----- ЗНАЧЕННЯ ЗМІННИХ ТА ЇХ ТИПИ -----")
+variables = [
+    ("age", age),
+    ("year", year),
+    ("pi", pi),
+    ("temperature", temperature),
+    ("name", name),
+    ("surname", surname),
+    ("greeting", greeting),
+    ("is_student", is_student),
+    ("is_working", is_working),
+    ("numbers", numbers),
+    ("fruits", fruits),
+    ("coordinates", coordinates),
+    ("colors", colors),
+    ("unique_numbers", unique_numbers),
+    ("letters", letters),
+    ("student", student),
+    ("nothing", nothing),
+]
+for var_name, var_value in variables:
+    print(f"{var_name:15} = {str(var_value):35} | тип: {type(var_value).__name__}")
+
+
+# ---------- 4. Оператори ----------
+print("\n----- ОПЕРАТОРИ -----")
+a, b = 10, 3
+
+print("\n[Арифметичні]")
+print(f"{a} + {b}  = {a + b}")
+print(f"{a} - {b}  = {a - b}")
+print(f"{a} * {b}  = {a * b}")
+print(f"{a} / {b}  = {a / b}")
+print(f"{a} // {b} = {a // b}")
+print(f"{a} % {b}  = {a % b}")
+print(f"{a} ** {b} = {a ** b}")
+
+print("\n[Порівняння]")
+print(f"{a} == {b} -> {a == b}")
+print(f"{a} != {b} -> {a != b}")
+print(f"{a} >  {b} -> {a > b}")
+print(f"{a} <  {b} -> {a < b}")
+print(f"{a} >= {b} -> {a >= b}")
+print(f"{a} <= {b} -> {a <= b}")
+
+print("\n[Логічні]")
+x, y = True, False
+print(f"{x} and {y} -> {x and y}")
+print(f"{x} or  {y} -> {x or y}")
+print(f"not {x}     -> {not x}")
+
+print("\n[Присвоєння]")
+c = 5
+print(f"c = 5   -> {c}")
+c += 2; print(f"c += 2  -> {c}")
+c -= 1; print(f"c -= 1  -> {c}")
+c *= 3; print(f"c *= 3  -> {c}")
+c /= 2; print(f"c /= 2  -> {c}")
+
+print("\n[Належності]")
+print(f"2 in numbers      -> {2 in numbers}")
+print(f"10 not in numbers -> {10 not in numbers}")
+print(f"'a' in letters    -> {'a' in letters}")
+
+print("\n[Побітові]")
+p, q = 6, 3
+print(f"{p} &  {q} = {p & q}  (AND)")
+print(f"{p} |  {q} = {p | q}  (OR)")
+print(f"{p} ^  {q} = {p ^ q}  (XOR)")
+print(f"~{p}     = {~p}     (NOT)")
+print(f"{p} << 1 = {p << 1}  (зсув вліво)")
+print(f"{p} >> 1 = {p >> 1}  (зсув вправо)")
+
+print("\n[Тотожності]")
+list1 = [1, 2, 3]
+list2 = list1
+list3 = [1, 2, 3]
+print(f"list1 is list2     -> {list1 is list2}")
+print(f"list1 is list3     -> {list1 is list3}")
+print(f"list1 is not list3 -> {list1 is not list3}")
+
+print("\n" + "=" * 40)
+print("Лабораторна робота №1 завершена ✅")
